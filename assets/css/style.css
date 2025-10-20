@@ -98,6 +98,7 @@ body {
     margin-top: 40px;
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 .recent-posts li {
