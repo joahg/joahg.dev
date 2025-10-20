@@ -38,14 +38,14 @@ body {
 .greeting {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 20px;
+    justify-content: center;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
 .profile-pic {
-    width: 48px;
-    height: 48px;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
@@ -64,16 +64,20 @@ body {
     color: #666;
     margin-bottom: 12px;
     line-height: 1.6;
+    max-width: 350px;
+    margin: auto auto 12px;
+    text-align: center;
 }
 
 .social-links {
     display: flex;
     gap: 16px;
-    margin-top: 20px;
+    margin-top: 35px;
+    justify-content: center;
 }
 
 .social-links a {
-    color: var(--text-color);
+    color: #333;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
