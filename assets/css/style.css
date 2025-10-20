@@ -1,0 +1,269 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --link-color: #0066cc;
+    --link-hover-color: #004499;
+    --border-color: #e0e0e0;
+    --card-bg: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Home page styles */
+.home {
+    padding: 60px 20px 20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.greeting {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.profile h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.location {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.bio {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #555;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.social-links a:hover {
+    background-color: var(--card-bg);
+    color: var(--link-hover-color);
+}
+
+/* Recent posts section */
+.recent-posts {
+    margin-top: 60px;
+}
+
+.recent-posts h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.posts-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.post-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.post-card h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.post-card h3 a:hover {
+    color: var(--link-color);
+}
+
+.post-card time {
+    display: block;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.post-card .excerpt {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Post page styles */
+.post {
+    padding: 40px 20px;
+}
+
+.post-header {
+    margin-bottom: 40px;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--link-color);
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: var(--link-hover-color);
+}
+
+.post-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.post-header time {
+    color: #666;
+    font-size: 16px;
+}
+
+.post-content {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.post-content h1 { font-size: 32px; }
+.post-content h2 { font-size: 28px; }
+.post-content h3 { font-size: 24px; }
+.post-content h4 { font-size: 20px; }
+
+.post-content p {
+    margin-bottom: 20px;
+}
+
+.post-content a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--link-color);
+}
+
+.post-content a:hover {
+    color: var(--link-hover-color);
+    border-bottom-color: var(--link-hover-color);
+}
+
+.post-content ul,
+.post-content ol {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.post-content li {
+    margin-bottom: 8px;
+}
+
+.post-content blockquote {
+    border-left: 4px solid var(--border-color);
+    padding-left: 20px;
+    margin: 30px 0;
+    color: #555;
+    font-style: italic;
+}
+
+.post-content code {
+    background: var(--card-bg);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.post-content pre {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.post-content pre code {
+    background: none;
+    padding: 0;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 30px 0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .profile h1 {
+        font-size: 28px;
+    }
+
+    .bio {
+        font-size: 16px;
+    }
+
+    .post-header h1 {
+        font-size: 28px;
+    }
+
+    .post-content {
+        font-size: 16px;
+    }
+}

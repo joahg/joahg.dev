@@ -1,11 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
-</html>
+---
+layout: default
+title: Home
+---
+<div class="home">
+    <div class="profile">
+        <div class="greeting">👋</div>
+        <h1>Joah Gerstenberg</h1>
+        <p class="location">Austin, TX @ Square</p>
+        <p class="bio">I build user experiences that connect people with the world around them.</p>
+
+        <div class="social-links">
+            <a href="mailto:me@joahg.com">Email</a>
+            <a href="https://github.com/joahg" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/joahg/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </div>
+
+    {% if site.posts.size > 0 %}
+    <section class="recent-posts">
+        <h2>Recent Posts</h2>
+        <div class="posts-grid">
+            {% for post in site.posts limit:3 %}
+            <article class="post-card">
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+                {% if post.excerpt %}
+                <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                {% endif %}
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+</div>

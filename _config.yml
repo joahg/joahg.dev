@@ -1,0 +1,23 @@
+title: Joah Gerstenberg
+description: Software Engineer building user experiences that connect people with the world around them
+author: Joah Gerstenberg
+email: me@joahg.com
+url: "https://joahg.dev"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
