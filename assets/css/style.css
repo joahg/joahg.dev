@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    max-width: 660px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -32,123 +32,87 @@ body {
 }
 
 .profile {
-    text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .greeting {
-    font-size: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
 .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 20px;
-    display: block;
+    flex-shrink: 0;
 }
 
 .profile h1 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    display: inline;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
 }
 
-.profession {
-    color: #555;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-.location {
+.location,
+.profession,
+.contact {
     color: #666;
-    margin-bottom: 20px;
-}
-
-.bio {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 30px;
-    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.6;
 }
 
 .social-links {
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
 }
 
-.social-links span,
 .social-links a {
-    color: var(--link-color);
+    color: var(--text-color);
     text-decoration: none;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s;
 }
 
 .social-links a:hover {
-    background-color: var(--card-bg);
-    color: var(--link-hover-color);
+    color: var(--link-color);
+}
+
+.social-links svg {
+    width: 20px;
+    height: 20px;
 }
 
 /* Recent posts section */
 .recent-posts {
-    margin-top: 60px;
+    margin-top: 40px;
+    list-style: none;
+    padding: 0;
 }
 
-.recent-posts h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-    text-align: center;
+.recent-posts li {
+    margin-bottom: 12px;
+    line-height: 1.6;
 }
 
-.posts-grid {
-    display: grid;
-    gap: 30px;
+.recent-posts time {
+    color: #666;
+    font-size: 14px;
 }
 
-.post-card {
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.post-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.post-card h3 {
-    font-size: 22px;
-    margin-bottom: 8px;
-}
-
-.post-card h3 a {
-    color: var(--text-color);
+.recent-posts a {
+    color: var(--link-color);
     text-decoration: none;
 }
 
-.post-card h3 a:hover {
-    color: var(--link-color);
-}
-
-.post-card time {
-    display: block;
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 12px;
-}
-
-.post-card .excerpt {
-    color: #555;
-    line-height: 1.6;
+.recent-posts a:hover {
+    text-decoration: underline;
 }
 
 /* Post page styles */
@@ -285,12 +249,13 @@ body {
 
 /* Responsive design */
 @media (max-width: 600px) {
-    .profile h1 {
-        font-size: 28px;
+    .greeting {
+        font-size: 18px;
     }
 
-    .bio {
-        font-size: 16px;
+    .profile-pic {
+        width: 40px;
+        height: 40px;
     }
 
     .post-header h1 {
