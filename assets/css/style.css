@@ -249,6 +249,24 @@ body {
     margin: 30px 0;
 }
 
+/* Image gallery styles */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.image-row img {
+    width: 320px;
+    height: 320px;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0;
+}
+
 /* Responsive design */
 @media (max-width: 600px) {
     .profile h1 {
