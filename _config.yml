@@ -7,7 +7,7 @@ baseurl: ""
 
 # Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:title/
 
 # Plugins
 plugins:
@@ -25,4 +25,4 @@ exclude:
 collections:
   posts:
     output: true
-    permalink: /blog/:year/:month/:day/:title/
+    permalink: /:title/

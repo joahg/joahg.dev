@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 660px;
     margin: 0 auto;
 }
 
@@ -41,10 +41,25 @@ body {
     margin-bottom: 20px;
 }
 
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    display: block;
+}
+
 .profile h1 {
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+.profession {
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .location {
@@ -66,6 +81,7 @@ body {
     flex-wrap: wrap;
 }
 
+.social-links span,
 .social-links a {
     color: var(--link-color);
     text-decoration: none;
