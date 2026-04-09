@@ -485,6 +485,46 @@ body {
     opacity: 0.4;
 }
 
+/* Post bio footer */
+.post-bio {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.post-bio-divider {
+    color: var(--accent-rose);
+    font-size: 16px;
+    letter-spacing: 6px;
+    opacity: 0.5;
+    margin-bottom: 28px;
+}
+
+.post-bio-pic {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-blush);
+    box-shadow: 0 0 0 6px rgba(212, 160, 160, 0.1);
+    margin-bottom: 16px;
+}
+
+.post-bio p {
+    color: var(--text-muted);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.post-bio strong {
+    color: var(--text-color);
+    font-weight: 500;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 17px;
+}
+
 /* Image gallery styles */
 .image-row {
     display: flex;
