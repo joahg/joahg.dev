@@ -280,8 +280,17 @@ body {
     margin-bottom: 40px;
     text-align: center;
     padding-bottom: 32px;
-    border-bottom: 1px solid var(--border-color);
     position: relative;
+}
+
+.post-header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, var(--border-color) 0%, var(--border-color) calc(50% - 24px), transparent calc(50% - 24px), transparent calc(50% + 24px), var(--border-color) calc(50% + 24px), var(--border-color) 100%);
 }
 
 .post-header::after {
@@ -290,11 +299,10 @@ body {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--bg-color);
-    padding: 0 12px;
     color: var(--accent-rose);
-    font-size: 18px;
+    font-size: 20px;
     opacity: 0.5;
+    line-height: 1;
 }
 
 .back-link {
