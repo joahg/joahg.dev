@@ -586,20 +586,36 @@ body {
     }
 
     .greeting {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .profile h1 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .profile-pic {
-        width: 130px;
-        height: 130px;
+        width: 110px;
+        height: 110px;
+    }
+
+    .location,
+    .profession,
+    .contact {
+        font-size: 14px;
+        max-width: 280px;
+    }
+
+    .social-links a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .recent-posts a {
+        font-size: 16px;
     }
 
     .post-header h1 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .post-content {

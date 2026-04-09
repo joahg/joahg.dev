@@ -31,7 +31,7 @@ layout: default
       {% for post in site.posts %}
       <li>
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time> - 
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <a href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url | relative_url }}{% endif %}"{% if post.external_url %} target="_blank" rel="noopener"{% endif %}>{{ post.title }}</a>
       </li>
       {% endfor %}
     </ul>
