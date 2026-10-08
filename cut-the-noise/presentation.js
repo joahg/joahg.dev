@@ -3,6 +3,12 @@
   const panel = document.getElementById('presentation');
   const board = document.getElementById('storyboard');
   const image = document.getElementById('active-slide');
+  const finalLink = document.getElementById('final-slide-link');
+  function positionFinalLink() {
+    const scale = Math.min(panel.clientWidth / 1280, panel.clientHeight / 720);
+    finalLink.style.cssText = `left:${(panel.clientWidth - 1280 * scale) / 2 + 940 * scale}px;top:${(panel.clientHeight - 720 * scale) / 2 + 684 * scale}px;width:${270 * scale}px;height:${30 * scale}px`;
+  }
+  window.addEventListener('resize', positionFinalLink);
   const counter = document.getElementById('counter');
   const previous = document.getElementById('previous');
   const next = document.getElementById('next');
@@ -19,6 +25,7 @@
     counter.textContent = `${current + 1} / ${links.length}`;
     previous.disabled = current === 0; next.disabled = current === links.length - 1;
     document.title = `${current + 1}. ${links[current].dataset.title} — Cut the Noise`;
+    finalLink.hidden = current !== links.length - 1; positionFinalLink();
     reveal();
     if (current + 1 < links.length) { const preload = new Image(); preload.src = links[current + 1].querySelector('img').src; }
   }
@@ -51,7 +58,7 @@
     if (!active() || event.altKey || event.ctrlKey || event.metaKey) return;
     const key = event.key;
     if (key === 'Tab') {
-      reveal(); const focusable = [...panel.querySelectorAll('button:not(:disabled)')];
+      reveal(); const focusable = [...panel.querySelectorAll('button:not(:disabled), a:not([hidden])')];
       const first = focusable[0], last = focusable[focusable.length - 1];
       if (event.shiftKey && (document.activeElement === first || document.activeElement === panel)) { event.preventDefault(); last.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
