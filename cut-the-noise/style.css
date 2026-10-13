@@ -7,3 +7,5 @@
 
 .slide .sources{margin-top:14px;font-size:.875rem;line-height:1.6;color:var(--muted)}.sources a{color:var(--accent)}.sources a:hover{color:var(--ink)}
 .source-hotspot{position:absolute;display:block;z-index:11;cursor:pointer;border-radius:2px}.source-hotspot:hover{background:#347A7618}.source-hotspot:focus-visible{outline:3px solid #347A76;outline-offset:2px}#presentation.idle .source-hotspot{cursor:pointer}
+
+.contact-links{display:flex;flex-wrap:wrap;gap:24px;margin:22px 0 0;font-size:1rem;color:var(--accent)}
