@@ -9,3 +9,5 @@
 .source-hotspot{position:absolute;display:block;z-index:11;cursor:pointer;border-radius:2px}.source-hotspot:hover{background:#347A7618}.source-hotspot:focus-visible{outline:3px solid #347A76;outline-offset:2px}#presentation.idle .source-hotspot{cursor:pointer}
 
 .contact-links{display:flex;flex-wrap:wrap;gap:24px;margin:22px 0 0;font-size:1rem;color:var(--accent)}
+
+.talk-resources{margin:30px 0 32px;padding-bottom:28px;border-bottom:1px solid var(--line)}.talk-resources h2{font-size:1.2rem;font-weight:600;margin:0 0 16px}.talk-resources ul{margin:0;padding-left:22px;columns:2;column-gap:44px}.talk-resources li{break-inside:avoid;padding:0 0 10px;line-height:1.5;font-size:.95rem}.talk-resources a{color:var(--accent)}.talk-resources .reviewer-resource{font-weight:650}@media(max-width:760px){.talk-resources ul{columns:1}.talk-resources{margin-top:26px}}
